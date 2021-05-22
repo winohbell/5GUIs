@@ -5,7 +5,7 @@ import Counter from './src/Counter.jsx';
 import TempConv from './src/TempConv.jsx';
 import FlightBooker from './src/FlightBooker.jsx';
 import Timer from './src/Timer.jsx';
-import Crud from './src/Crud.jsx';
+import Crud from './src/Crud/Crud.jsx';
 
 class App extends React.Component {
     constructor(props) {
