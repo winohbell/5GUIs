@@ -1,0 +1,21 @@
+#task4 {
+	width: 290px;
+}
+#Timer {
+	div {
+		margin-bottom: 5px;
+	}
+	progress {
+		width: 165px;
+	}
+	input {
+		width: 165px;
+	}
+	button {
+		width: 100%;
+	}
+    #duration {
+        display: flex;
+        justify-content: space-between;
+    }
+}

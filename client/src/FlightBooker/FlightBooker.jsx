@@ -1,5 +1,6 @@
 import React from 'react';
 import dayjs from 'dayjs';
+import './FlightBooker.scss';
 
 export default class FlightBooker extends React.Component {
     constructor(props) {
@@ -61,7 +62,7 @@ export default class FlightBooker extends React.Component {
 
     render() {
       return (
-        <div id="FlightBooker">
+        <div id="FlightBooker" className="taskBody">
             <select onChange={this.handleFlightTypeChange} select={this.state.flightType}>
                 <option value='oneway'>one-way flight</option>
                 <option value='return'>return flight</option>

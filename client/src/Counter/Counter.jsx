@@ -1,4 +1,5 @@
 import React from 'react';
+import'./Counter.scss'
 
 export default class Counter extends React.Component {
     constructor(props) {
@@ -14,8 +15,9 @@ export default class Counter extends React.Component {
     
     render() {
       return (
-        <div id="counter">
-          <div id="countDisplay">{this.state.count}</div>
+        <div id="Counter" className="taskBody">
+          {/* <div id="countDisplay" className="inputDisplay">{this.state.count}</div> */}
+          <input value={this.state.count} readOnly/>
           <button onClick={this.countUp.bind(this)}>Count</button>
         </div>
       )

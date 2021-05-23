@@ -1,6 +1,8 @@
 import React from 'react';
 import {v4 as uuidv4} from 'uuid';
 
+import './Crud.scss';
+
 import PersonFilter from './PersonFilter.jsx';
 import PersonList from './PersonList.jsx';
 import PersonForm from './PersonForm.jsx';
@@ -17,7 +19,7 @@ export default class Crud extends React.Component {
         selectedPersonId: undefined,
         name: '',
         surname: ''
-      }
+      };
 
       this.handleFilterStrChange = this.handleFilterStrChange.bind(this);
       this.handleSelectedPersonIdChange = this.handleSelectedPersonIdChange.bind(this);
@@ -77,9 +79,6 @@ export default class Crud extends React.Component {
       this.setState({persons: newPersons})
     }
 
-
-    
-
     handleUpdate() {
       let updatedPerson = {
         id: this.state.selectedPersonId,
@@ -100,10 +99,12 @@ export default class Crud extends React.Component {
 
     render() {
       return (
-        <div id="Crud">
+        <div id="Crud" className="taskBody">
             <PersonFilter filterStr={this.state.filterStr} handleFilterStrChange={this.handleFilterStrChange}/>
-            <PersonList {...this.state} handleChange={this.handleSelectedPersonIdChange} />
-            <PersonForm name={this.state.name} surname={this.state.surname} handleNameChange={this.handleNameChange} handleSurnameChange={this.handleSurnameChange}/>
+            <div id="PersonDisplay">
+              <PersonList {...this.state} handleChange={this.handleSelectedPersonIdChange} />
+              <PersonForm name={this.state.name} surname={this.state.surname} handleNameChange={this.handleNameChange} handleSurnameChange={this.handleSurnameChange}/>
+            </div>
             <ButtonCommands handleCreate={this.handleCreate} handleUpdate={this.handleUpdate} handleDelete={this.handleDelete} selectedPersonId={this.state.selectedPersonId} />
         </div>
       )

@@ -1,0 +1,27 @@
+#task5 {
+    width: 350px;
+}
+
+#PersonDisplay {
+    display: flex;
+    margin: 10px 0px 10px 0px;
+    div {
+        flex: 1 1 0px;
+    }
+    #PersonForm {
+        label {
+            width: 70px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        input {
+            width: 80px;
+        }
+    }
+}
+
+#ButtonCommands {
+    button {
+        margin-right: 20px;
+    }
+}

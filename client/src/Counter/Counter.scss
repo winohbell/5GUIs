@@ -1,0 +1,14 @@
+#task1 {
+	width: 200px;
+}
+#Counter {
+	display: flex;
+	justify-content: space-around;
+	input {
+		width: 80px;
+		text-align: center;
+	}
+	button {
+		width: 80px;
+	}
+}

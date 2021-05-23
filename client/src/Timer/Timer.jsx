@@ -1,4 +1,5 @@
 import React from 'react';
+import './Timer.scss';
 
 export default class Timer extends React.Component {
     constructor(props) {
@@ -37,16 +38,16 @@ export default class Timer extends React.Component {
 
     render() {
       return (
-        <div id="Timer">
+        <div id="Timer" className="taskBody">
             <div>
-                Elapsed time: 
+                <span>Elapsed time: </span>
                 <progress max={this.state.duration} value={this.state.elapsed}/>
             </div>
             <div>
                 <span>{this.state.elapsed.toFixed(1)}s</span>
             </div>
-            <div>
-                Duration:
+            <div id="duration">
+                <span>Duration:</span>
                 <input type="range" min={0} max={15} value={this.state.duration} onChange={e => {this.handledurationChange(e)}} />
             </div>
             <button onClick={e => {this.resetTimer(e)}}>Reset</button>
