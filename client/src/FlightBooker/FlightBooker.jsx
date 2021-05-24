@@ -21,7 +21,6 @@ export default class FlightBooker extends React.Component {
         this.setState({endDate:e.target.value})
     }
     handleFlightTypeChange(e) {
-        console.log(e.target.value)
         this.setState({flightType: e.target.value})
     }
     handleBook(e) {
