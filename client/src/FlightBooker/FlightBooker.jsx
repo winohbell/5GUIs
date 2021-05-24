@@ -52,6 +52,7 @@ export default class FlightBooker extends React.Component {
     isValidDate(dateStr) {
         let isValidDate = dayjs(this.dayjsFormat(dateStr)).isValid();
         let dateArr = dateStr.split('.')
+        if (dateArr.length !== 3) return false
         let isValidFormat = dateArr[0].length === 2 && dateArr[1].length === 2 && dateArr[2].length === 4;
         return isValidDate && isValidFormat
     }
